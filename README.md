@@ -1,6 +1,16 @@
 Welcome to your new dbt project!
 
-# Profiles.yml
+# to activate the environment type on terminal: ../bin/activate
+
+# to install dependencies: pip install ${dependency name}
+
+# to run file type on terminal: python3 ${name of the file}
+
+# when done type on terminal: deactivate
+
+# dbt installation: https://www.youtube.com/watch?v=toSAAgLUHuk
+
+## Profiles.yml
 
 /Users/admin/.dbt/profiles.yml
 
