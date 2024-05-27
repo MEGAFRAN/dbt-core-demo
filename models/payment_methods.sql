@@ -7,6 +7,5 @@ select
     location,
     season,
     payment_method,
-    frequency_of_purchases
 from {{ref('shopping_trends_formatted')}}
 

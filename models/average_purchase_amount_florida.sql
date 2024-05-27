@@ -1,8 +1,8 @@
 {{config(materialized = 'table')}} 
 
 select 
-    gender,
-    AVG(age) as average_age,
+    DISTINCT location,
     AVG(purchase_amount) as average_purchase_amount,
 from {{ref('shopping_trends_formatted')}}
-group by gender
+where location = "Florida" OR location = "florida"
+group by location

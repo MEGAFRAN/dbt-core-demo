@@ -1,6 +1,6 @@
 Welcome to your new dbt project!
 
-# to activate the environment type on terminal: ../bin/activate
+# to activate the environment type on terminal: source ../bin/activate
 
 # to install dependencies: pip install ${dependency name}
 
