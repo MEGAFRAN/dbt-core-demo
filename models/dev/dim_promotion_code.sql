@@ -1,8 +1,8 @@
 {{config(materialized = 'table')}}
 
 SELECT 
-    ROW_NUMBER() OVER (ORDER BY promo_code_used) AS promotion_code_id,
+    {{dbt_utils.generate_surrogate_key(['promo_code_used'])}} AS promotion_code_key,
     promo_code_used
 FROM {{ref('shopping_trend')}}
 GROUP BY promo_code_used
-ORDER BY promotion_code_id
+ORDER BY promo_code_used

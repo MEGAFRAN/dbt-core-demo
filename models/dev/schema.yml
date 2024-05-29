@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: dim_customer
+    description: "customer"
+  - name: dim_item
+    description: "item"
+  - name: dim_location
+    description: "location"
+  - name: dim_payment_method
+    description: "payment method"
+  - name: dim_promotion_code
+    description: "promotion code"
+  - name: dim_shipping_type
+    description: "shipping type"
+  - name: fact_purchases
+    description: "purchases"

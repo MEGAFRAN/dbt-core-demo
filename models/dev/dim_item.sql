@@ -1,10 +1,10 @@
 {{config(materialized = 'table')}}
 
 SELECT 
-    ROW_NUMBER() OVER (ORDER BY item_purchased) AS item_id,
+    {{dbt_utils.generate_surrogate_key(['item_purchased'])}} AS item_key,
     item_purchased,
     category,
     size,
     color
 FROM {{ref('shopping_trend')}}
-ORDER BY item_id
+ORDER BY item_purchased

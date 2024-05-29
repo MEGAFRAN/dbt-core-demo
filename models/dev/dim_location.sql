@@ -1,8 +1,8 @@
 {{config(materialized = 'table')}}
 
 SELECT 
-    ROW_NUMBER() OVER (ORDER BY location) AS location_id,
+    {{dbt_utils.generate_surrogate_key(['location'])}} AS location_key,
     location
 FROM {{ref('shopping_trend')}}
 GROUP BY location
-ORDER BY location_id
+ORDER BY location
